@@ -4,17 +4,66 @@
 
 
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-import random
-import os    
-   
 def view_r_i(target_dir, target_class):
-  print("Attempt")
+   import matplotlib.pyplot as plt
+   import matplotlib.image as mpimg
+   import random
+   import os    
+
+    #Setup target directory 
+   target_folder=target_dir+target_class
+
+   #Get a random path 
+   random_image=random.sample(os.listdir(target_folder),1)
+
+   #Read the image and plot
+   img=mpimg.imread(target_folder+"/" +random_image[0])
+
+   plt.imshow(img)
+   plt.title(target_class)
+   plt.axis("off")
+   print(f"Image shape: {img.shape}")
+
+   return 
+
+#-----------------------------------
+#-----------------------------------
 
 
+def random_images_and_predictions(class_names,test_dir,class_name)
+   import os
+   import random
+   plt.figure(figsize=(17,10))
+   for i in range(3):
+      class_name=random.choice(class_names)
+      filename=random.choice(os.listdir(test_dir+"/"+class_name))
+      filepath=test_dir+class_name+"/"+filename
+  
+  #load image and make predictions
+ 
+      img=load_and_prep_image(filepath,scale=False)
+  #print(img.shape)
+      img_expanded=tf.expand_dims(img,axis=0)
+ # print(img_expanded.shape)
+      pred_prob=model.predict(img_expanded)
+      pred_class=class_names[pred_prob.argmax()]
+
+ # print(pred_prob)
+ # print(pred_prob.argmax())
+ # print(pred_class)
+      plt.subplot(1,3,i+1)
+
+      plt.imshow(img/255.)
+      if class_name==pred_class:
+         title_color='g'
+      else:
+         title_color='r'
+      plt.title(f"actual: {class_name}, pred : {pred_class}, prob: {pred_prob.max():.2f}", c=title_color)
+       plt.axis(False)
 
 
+#-----------------------------------
+#-----------------------------------
 
 
 import tensorflow as tf
