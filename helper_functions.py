@@ -10,6 +10,15 @@ import random
 import os    
    
 def view_r_i(target_dir, target_class):
+     """
+  Reads in an image from filename, turns it into a tensor and reshapes into
+  (224, 224, 3).
+  Parameters
+  ----------
+  filename (str): string filename of target image
+  img_shape (int): size to resize target image to, default 224
+  scale (bool): whether to scale pixel values to range(0, 1), default True
+  """
   #Setup target directory 
   target_folder=target_dir+target_class
   #Get a random path 
