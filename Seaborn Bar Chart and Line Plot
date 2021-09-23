@@ -1,0 +1,22 @@
+import seaborn as sns
+import pandas as pd
+
+df=pd.DataFrame([[10,10,20],[20,30,40],[50,50,30]],columns=["a","b","c"], index=["a1","b1","c1"])
+
+plt.figure(figsize=(10,6))
+plt.title("this is a title")
+
+#Bar chart
+sns.barplot(x=df.index, y=df.sum())
+
+#Line plot
+sns.lineplot(data=df)
+plt.title("overall")
+
+
+#Line plot one by one 
+sns.lineplot(data=df['a'], label="this is a")
+sns.lineplot(data=df['b'], label="this is b")
+plt.xlabel("class")
+plt.ylabel("age")
+plt.title("a and b")
