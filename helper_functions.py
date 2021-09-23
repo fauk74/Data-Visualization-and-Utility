@@ -22,7 +22,9 @@ def view_r_i(target_dir, target_class):
   print(f"Image shape: {img.shape}")
 
 
-
+def hello_world:
+  ####
+   print("hello world")
 
 
 
