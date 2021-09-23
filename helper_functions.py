@@ -9,7 +9,7 @@ import matplotlib.image as mpimg
 import random
 import os    
    
-def view_random_image1(target_dir, target_class):
+def view_r_i(target_dir, target_class):
   #Setup target directory 
   target_folder=target_dir+target_class
 
@@ -24,7 +24,7 @@ def view_random_image1(target_dir, target_class):
   plt.axis("off")
   print(f"Image shape: {img.shape}")
 
-  return
+
 
 
 
