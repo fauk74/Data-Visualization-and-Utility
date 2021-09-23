@@ -30,7 +30,7 @@ def view_r_i(target_dir, target_class):
 #-----------------------------------
 
 
-def random_images_and_predictions(class_names,test_dir,class_name)
+def random_images_and_predictions(class_names,test_dir,class_name):
    import os
    import random
    plt.figure(figsize=(17,10))
