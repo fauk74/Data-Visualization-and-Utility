@@ -12,13 +12,10 @@ import os
 def view_r_i(target_dir, target_class):
   #Setup target directory 
   target_folder=target_dir+target_class
-
   #Get a random path 
   random_image=random.sample(os.listdir(target_folder),1)
-
   #Read the image and plot
   img=mpimg.imread(target_folder+"/" +random_image[0])
-
   plt.imshow(img)
   plt.title(target_class)
   plt.axis("off")
