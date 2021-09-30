@@ -2,6 +2,21 @@
 ### Storing them here so they're easily accessible.
 
 
+def calculate_results(y_true, y_pred):
+  """ 
+  Calculates model accuracy, precision, recall and f1 score of a binary classification model
+  """
+
+  model_accuracy=round(accuracy_score(y_true, y_pred)*100, ndigits=2)
+  model_precision, model_recall, model_f1,_=precision_recall_fscore_support(y_true, y_pred, average='weighted')
+  model_results={"accuracy": model_accuracy,
+                 "precision": round(model_precision*100,ndigits=2),
+                 "recall": round(model_recall*100,ndigits=2),
+                 "f1":round(model_f1*100,ndigits=2)}
+  return model_results
+
+
+
 
 
 def view_r_i(target_dir, target_class):
