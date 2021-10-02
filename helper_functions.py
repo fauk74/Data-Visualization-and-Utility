@@ -74,7 +74,7 @@ def random_images_and_predictions(class_names,test_dir,class_name):
       else:
          title_color='r'
       plt.title(f"actual: {class_name}, pred : {pred_class}, prob: {pred_prob.max():.2f}", c=title_color)
-       plt.axis(False)
+      plt.axis(False)
 
 
 #-----------------------------------
