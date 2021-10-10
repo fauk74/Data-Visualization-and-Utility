@@ -1,6 +1,18 @@
 ### We create a bunch of helpful functions throughout the course.
 ### Storing them here so they're easily accessible.
 
+def pred_timer(model, samples):
+  """
+  Times how long a model takes to make predictions on sample
+  """
+  start_time=time.perf_counter()#get start time
+  model.predict(samples)
+  end_time=time.perf_counter()
+  total_time=end_time -start_time 
+  time_per_pred=total_time/len(samples)
+  return total_time, time_per_pred
+
+
 
 def calculate_results(y_true, y_pred):
   """ 
