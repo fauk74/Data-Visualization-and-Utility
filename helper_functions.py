@@ -19,7 +19,7 @@ def calculate_results(y_true, y_pred):
   Calculates model accuracy, precision, recall and f1 score of a binary classification model
   """
 
-  model_accuracy=round(accuracy_score(y_true, y_pred)*100, ndigits=2)
+  model_accuracy=round(accuracy_score(y_true, y_pred), ndigits=2)
   model_precision, model_recall, model_f1,_=precision_recall_fscore_support(y_true, y_pred, average='weighted')
   model_results={"accuracy": model_accuracy,
                  "precision": model_precision,
