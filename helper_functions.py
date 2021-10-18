@@ -2,10 +2,10 @@
 ### Storing them here so they're easily accessible.
 
 
-def ColorMap2C (title, X_set,y_set):
+def ColorMap2C (title, classifier, X_set,y_set):
   from matplotlib.colors import ListedColormap
   """
-  Plot a map contour of a set. The first variable is the title, the second the X_set, the third y_set
+  Plot a map contour of a set. The first variable is the title, the second the classifier, the second the X_set, the third y_set
   X has 2 components
   """
   X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
