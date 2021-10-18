@@ -1,5 +1,4 @@
-### We create a bunch of helpful functions throughout the course.
-### Storing them here so they're easily accessible.
+###  bunch of helpful functions 
 
 
 def ColorMap2C (title, classifier, X_set,y_set):
