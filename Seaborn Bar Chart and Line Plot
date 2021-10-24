@@ -1,3 +1,27 @@
+
+#---------------------------------------------------------
+#simple histogram plot
+#---------------------------------------------------------
+df.total_lines.plot.hist();
+
+#or, in alternative, using matplotlib: 
+
+import matplotlib.pyplot as plt
+plt.hist(sent_lens, bins=50)
+
+
+#---------------------------------------------------------
+#percentiles
+#---------------------------------------------------------
+
+
+percentile=int(np.percentile(sent_lens,95))
+
+
+
+
+
+#----------------------------------------------------------
 import seaborn as sns
 import pandas as pd
 
