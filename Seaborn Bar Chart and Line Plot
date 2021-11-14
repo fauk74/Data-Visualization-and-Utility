@@ -9,6 +9,9 @@ df.total_lines.plot.hist();
 import matplotlib.pyplot as plt
 plt.hist(sent_lens, bins=50)
 
+#or 
+
+df.plot(kind="bar", figsize=(10,7)).legend(bbox_to_anchor=(1.0, 1.0))
 
 #---------------------------------------------------------
 #percentiles
