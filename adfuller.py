@@ -1,11 +1,12 @@
-from statsmodels.tsa.stattools import adfuller
-import pandas as pd
+
 
 def adf_test(series,title=''):
     """
     Pass in a time series and an optional title, returns an ADF report
     """
     print(f'Augmented Dickey-Fuller Test: {title}')
+    from statsmodels.tsa.stattools import adfuller
+    import pandas as pd
     result = adfuller(series.dropna(),autolag='AIC') # .dropna() handles differenced data
     
     labels = ['ADF test statistic','p-value','# lags used','# observations']
